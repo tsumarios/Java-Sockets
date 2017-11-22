@@ -9,7 +9,7 @@
 import java.io.*;
 import java.net.*;
  
-public class Client {
+public class Client{
 
     /* Specific request */
     public static void doRequire(BufferedReader in, PrintWriter out, String msg) throws IOException{
@@ -23,10 +23,10 @@ public class Client {
     }
 
     /* Main */
-    public static void main(String[] args) { 
+    public static void main(String[] args){ 
         try{
             /* Input check */
-            if (args.length != 1) {
+            if(args.length != 1){
                 System.out.println("Must pass a <message> string");
                 System.exit(-1);
             }
