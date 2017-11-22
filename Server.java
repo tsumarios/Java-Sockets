@@ -9,10 +9,10 @@
 import java.io.*;
 import java.net.*;
  
-public class Server {
+public class Server{
  
     /* Print socket info */
-    public static void printSocketInfo(Socket socket) {
+    public static void printSocketInfo(Socket socket){
         System.out.println(">> Socket Info:");
         System.out.println(" Local Address: " + socket.getLocalAddress());
         System.out.println(" Local Port: " + socket.getLocalPort());
@@ -30,7 +30,7 @@ public class Server {
     }
 
     /* Main */
-    public static void main(String[] args) {
+    public static void main(String[] args){
         ServerSocket serverSocket = null;
 
         try{
