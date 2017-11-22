@@ -13,13 +13,14 @@ public class Server {
  
     /* Print socket info */
     public static void printSocketInfo(Socket socket) {
-        System.out.println("Local Address: " + socket.getLocalAddress());
-        System.out.println("Local Port: " + socket.getLocalPort());
-        System.out.println("Remote Address: " + socket.getInetAddress());
-        System.out.println("Remote Port: " + socket.getPort());
+        System.out.println(">> Socket Info:");
+        System.out.println(" Local Address: " + socket.getLocalAddress());
+        System.out.println(" Local Port: " + socket.getLocalPort());
+        System.out.println(" Remote Address: " + socket.getInetAddress());
+        System.out.println(" Remote Port: " + socket.getPort());
     }
 
-    /* Specific method */
+    /* Specific service */
     public static void doServe(BufferedReader in, PrintWriter out) throws IOException{
         System.out.println(">> Serving ...");
         String request = in.readLine();
