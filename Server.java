@@ -43,15 +43,15 @@ public class Server{
                 System.out.println(">> Waiting for connection on port " + serverPort + " ...");
 
                 /* Wait for a connection */
-                Socket clientSocket = serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println(">> Connection received!");
                  
                 /* Connect to input stream */
-                InputStreamReader isr = new InputStreamReader(clientSocket.getInputStream());
+                InputStreamReader isr = new InputStreamReader(socket.getInputStream());
                 BufferedReader in = new BufferedReader(isr);
                  
                 /* Connect to output stream */
-                OutputStreamWriter osw = new OutputStreamWriter(clientSocket.getOutputStream());
+                OutputStreamWriter osw = new OutputStreamWriter(socket.getOutputStream());
                 PrintWriter out = new PrintWriter(osw, true);
  
                 /* Specific service */
@@ -59,7 +59,7 @@ public class Server{
                 
                 /* Close server socket */
                 System.out.println(">> Close connection");
-                clientSocket.close();
+                socket.close();
             }
 
         }catch(Exception e){
